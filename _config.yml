@@ -1,3 +1,6 @@
 remote_theme: "owasp/www--site-theme@main"
 plugins:
  - jekyll-include-cache-0.2.0
+
+code_user: noir-cr
+code_repo: noir
