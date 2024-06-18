@@ -14,6 +14,15 @@ pitch: An open-source project that identifies attack surfaces to enhance whitebo
   <p>Attack surface detector that identifies endpoints by static analysis.</p>
 </div>
 
+<p align="center">
+<a href="https://github.com/noir-cr/noir/blob/main/CONTRIBUTING.md">
+<img src="https://img.shields.io/badge/CONTRIBUTIONS-WELCOME-000000?style=for-the-badge&labelColor=black"></a>
+<a href="https://github.com/noir-cr/noir/releases">
+<img src="https://img.shields.io/github/v/release/noir-cr/noir?style=for-the-badge&color=black&labelColor=black&logo=web"></a>
+<a href="https://crystal-lang.org">
+<img src="https://img.shields.io/badge/Crystal-000000?style=for-the-badge&logo=crystal&logoColor=white"></a>
+</p>
+
 <hr>
 
 Noir is an open-source project specializing in identifying attack surfaces for enhanced whitebox security testing and security pipeline. 
