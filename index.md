@@ -21,6 +21,12 @@ This includes the capability to discover API endpoints, web endpoints, and other
 
 ![](assets/images/preview.jpg)
 
-### Road Map
+## Key Features
+- Automatically identify language and framework from source code.
+- Find API endpoints and web pages through code analysis.
+- Load results quickly through interactions with proxy tools such as ZAP, Burpsuite, Caido and More Proxy tools.
+- That provides structured data such as JSON and YAML for identified Attack Surfaces to enable seamless interaction with other tools. Also provides command line samples to easily integrate and collaborate with other tools, such as curls or httpie.
+
+## Road Map
 We plan to expand the range of supported programming languages and frameworks, and to increase accuracy. 
 Initially conceived as a tool to assist with WhiteBox testing, our goal is to extract and provide endpoints from the source code within the DevSecOps Pipeline, enabling DAST to conduct more accurate and stable scans.
