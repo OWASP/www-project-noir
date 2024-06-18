@@ -4,7 +4,7 @@
 
 #### Classification
 
-* <i class="fas fa-tools" style="color:#233e81;"></i> Tool
+* <i class="fas fa-code" style="color:#233e81;"></i> Code
 
 #### Audience
 
