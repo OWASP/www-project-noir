@@ -21,6 +21,8 @@ pitch: An open-source project that identifies attack surfaces to enhance whitebo
 <img src="https://img.shields.io/github/v/release/noir-cr/noir?style=for-the-badge&color=black&labelColor=black&logo=web"></a>
 <a href="https://crystal-lang.org">
 <img src="https://img.shields.io/badge/Crystal-000000?style=for-the-badge&logo=crystal&logoColor=white"></a>
+<a href="https://owasp.org/www-project-noir/">
+<img src="https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white"></a>
 </p>
 
 <hr>
