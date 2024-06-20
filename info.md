@@ -12,10 +12,10 @@
 * <i class="fas fa-user-secret" style="color:#233e81;"></i> Breaker
 
 ### Downloads or Social Links
-* [Releases](https://github.com/noir-cr/noir/releases)
+* [Releases](https://github.com/owasp-noir/noir/releases)
 * [Homebrew](https://formulae.brew.sh/formula/noir)
 * [Snapcraft](https://snapcraft.io/noir)
-* [Docker (GHCR)](https://github.com/noir-cr/noir/pkgs/container/noir)
+* [Docker (GHCR)](https://github.com/owasp-noir/noir/pkgs/container/noir)
 
 ### Code Repository
-* [Github Repository](https://github.com/noir-cr/noir)
+* [Github Repository](https://github.com/owasp-noir/noir)
