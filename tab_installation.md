@@ -1,5 +1,5 @@
 ---
-title: installation
+title: Installation
 displaytext: Installation
 layout: null
 tab: true
@@ -7,7 +7,7 @@ order: 1
 tags: noir install
 ---
 
-## Intallation
+## Installation
 
 ### Homebrew
 
