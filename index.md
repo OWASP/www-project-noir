@@ -10,7 +10,7 @@ pitch: An open-source project that identifies attack surfaces to enhance whitebo
 ---
 
 <div align="center">
-  <img src="assets/images/logo.png" alt="" width="500px;">
+  <img src="assets/images/logo.png?noir" alt="" width="500px;">
   <p>Attack surface detector that identifies endpoints by static analysis.</p>
 </div>
 
