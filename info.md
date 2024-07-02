@@ -1,13 +1,6 @@
-### Noir Information
-
-* <i class="fas fa-egg" style="color:#233e81;"></i> Incubator Project
-
-#### Classification
+### Project Information
 
 * <i class="fas fa-code" style="color:#233e81;"></i> Code
-
-#### Audience
-
 * <i class="fas fa-toolbox" style="color:#233e81;"></i> Builder
 * <i class="fas fa-user-secret" style="color:#233e81;"></i> Breaker
 
@@ -18,4 +11,13 @@
 * [Docker (GHCR)](https://github.com/owasp-noir/noir/pkgs/container/noir)
 
 ### Code Repository
-* [Github Repository](https://github.com/owasp-noir/noir)
+* [Code Repository](https://github.com/owasp-noir/noir)
+* [Discussions](https://github.com/orgs/owasp-noir/discussions)
+
+### Recent Releases
+
+<ul>
+    {% for version in site.data.release.versions %}
+    <li><a target="_blank" href="https://github.com/owasp-noir/noir/releases/tag/{{version}}">{{ version }}</a></li>
+    {% endfor %}
+</ul>
