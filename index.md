@@ -41,3 +41,9 @@ This includes the capability to discover API endpoints, web endpoints, and other
 ## Road Map
 We plan to expand the range of supported programming languages and frameworks, and to increase accuracy. 
 Initially conceived as a tool to assist with WhiteBox testing, our goal is to extract and provide endpoints from the source code within the DevSecOps Pipeline, enabling DAST to conduct more accurate and stable scans.
+
+<style>
+  .sub-nav{
+    display: none !important;
+  }
+</style>
