@@ -1,3 +1,3 @@
 ### Leaders
-* [HAHWUL](mailto:hahwul@gmail.com)
-* [KSG](mailto:ksg97031@gmail.com)
+* [HAHWUL](mailto:h.lee@owasp.org)
+* [KSG](mailto:seonggi.kim@owasp.org)
