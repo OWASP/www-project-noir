@@ -28,15 +28,17 @@ pitch: An open-source project that identifies attack surfaces to enhance whitebo
 <hr>
 
 Noir is an open-source project specializing in identifying attack surfaces for enhanced whitebox security testing and security pipeline. 
-This includes the capability to discover API endpoints, web endpoints, and other potential entry points within source code for thorough security analysis and DAST.
+This includes the capability to discover API endpoints, web endpoints, and other potential entry points within source code for thorough security analysis and DAST. For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
 
 ![](assets/images/preview.jpg)
 
 ## Key Features
-- Automatically identify language and framework from source code.
-- Find API endpoints and web pages through code analysis.
-- Load results quickly through interactions with proxy tools such as ZAP, Burpsuite, Caido and More Proxy tools.
-- That provides structured data such as JSON and YAML for identified Attack Surfaces to enable seamless interaction with other tools. Also provides command line samples to easily integrate and collaborate with other tools, such as curls or httpie.
+- Identify API endpoints and parameters from source code.
+- Support various source code languages and frameworks.
+- Provide analysts with technical information and security issues identified during source code analysis.
+- Friendly pipeline & DevOps integration, offering multiple output formats (JSON, YAML, OAS spec) and compatibility with tools like curl and httpie.
+- Friendly Offensive Security Tools integration, allowing usage with tools such as ZAP and Caido, Burpsuite.
+- Generate elegant and clear output results.
 
 ## Road Map
 We plan to expand the range of supported programming languages and frameworks, and to increase accuracy. 
