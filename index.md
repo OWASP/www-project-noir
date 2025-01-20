@@ -33,12 +33,13 @@ This includes the capability to discover API endpoints, web endpoints, and other
 ![](assets/images/preview.jpg)
 
 ## Key Features
-- Identify API endpoints and parameters from source code.
-- Support various source code languages and frameworks.
-- Provide analysts with technical information and security issues identified during source code analysis.
-- Friendly pipeline & DevOps integration, offering multiple output formats (JSON, YAML, OAS spec) and compatibility with tools like curl and httpie.
-- Friendly Offensive Security Tools integration, allowing usage with tools such as ZAP and Caido, Burpsuite.
-- Generate elegant and clear output results.
+
+- Extract API endpoints and parameters from source code.
+- Support multiple languages and frameworks.
+- Uncover security issues with detailed analysis and rule-based passive scanning.
+- Integrate seamlessly with DevOps pipelines and tools like curl, ZAP, and Caido.
+- Deliver clear, actionable results in formats like JSON, YAML, and OAS.
+- Enhance endpoint discovery with AI for unfamiliar frameworks and hidden APIs.
 
 ## Road Map
 We plan to expand the range of supported programming languages and frameworks, and to increase accuracy. 
