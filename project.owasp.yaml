@@ -1,0 +1,48 @@
+audience:
+  - breaker
+  - builder
+leaders:
+  - name: HAHWUL
+    email: h.lee@owasp.org
+    github: hahwul
+  - name: KSG
+    email: seonggi.kim@owasp.org
+    github: ksg97031
+level: 2
+license:
+  - CC0-1.0
+  - MIT
+name: OWASP Noir
+pitch: An open-source project that identifies attack surfaces to enhance whitebox security testing and security pipelines.
+repositories:
+  - name: www-project-noir
+    url: https://github.com/OWASP/www-project-noir
+    description: Attack surface detector that identifies endpoints by static analysis
+  - name: www-project-noir
+    url: https://github.com/owasp-noir/www-project-noir
+    description: OWASP Foundation web repository
+  - name: .github
+    url: https://github.com/owasp-noir/.github
+  - name: homebrew-noir
+    url: https://github.com/owasp-noir/homebrew-noir
+  - name: noir
+    url: https://github.com/owasp-noir/noir
+    description: Attack surface detector that identifies endpoints by static analysis
+  - name: noir-artwork
+    url: https://github.com/owasp-noir/noir-artwork
+    description: Artwork for all official Noir swag
+  - name: noir-passive-rules
+    url: https://github.com/owasp-noir/noir-passive-rules
+    description: Passive Scan Rules for OWASP Noir
+  - name: owasp-noir.github.io
+    url: https://github.com/owasp-noir/owasp-noir.github.io
+    description: Page for redirect
+tags:
+  - noir
+  - owasp-noir
+  - sast
+  - dast
+  - attack-surface
+  - endpoint
+type: code
+website: https://owasp.org/www-project-noir
