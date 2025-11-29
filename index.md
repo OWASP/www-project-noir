@@ -5,7 +5,7 @@ title: OWASP Noir
 tags: noir owasp-noir sast dast attack-surface endpoint
 level: 2
 type: code
-pitch: An open-source project that identifies attack surfaces to enhance whitebox security testing and security pipelines.
+pitch: A hybrid static and AI-driven analyzer that detects every endpoint in your codebase, from shadow APIs to standard routes.
 
 ---
 
@@ -27,8 +27,9 @@ pitch: An open-source project that identifies attack surfaces to enhance whitebo
 
 <hr>
 
-Noir is an open-source project specializing in identifying attack surfaces for enhanced whitebox security testing and security pipeline. 
-This includes the capability to discover API endpoints, web endpoints, and other potential entry points within source code for thorough security analysis and DAST. For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
+OWASP Noir is an open-source hybrid analyzer (static + AI-driven) that discovers every endpoint in your codebase—from shadow APIs to standard routes—and strengthens your security pipeline.
+
+For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
 
 ![](assets/images/preview.jpg)
 
