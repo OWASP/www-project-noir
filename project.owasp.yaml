@@ -13,21 +13,21 @@ license:
   - CC0-1.0
   - MIT
 name: OWASP Noir
-pitch: An open-source project that identifies attack surfaces to enhance whitebox security testing and security pipelines.
+pitch: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.
 repositories:
   - name: www-project-noir
     url: https://github.com/OWASP/www-project-noir
-    description: Attack surface detector that identifies endpoints by static analysis
+    description: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.
   - name: www-project-noir
     url: https://github.com/owasp-noir/www-project-noir
-    description: OWASP Foundation web repository
+    description: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.
   - name: .github
     url: https://github.com/owasp-noir/.github
   - name: homebrew-noir
     url: https://github.com/owasp-noir/homebrew-noir
   - name: noir
     url: https://github.com/owasp-noir/noir
-    description: Attack surface detector that identifies endpoints by static analysis
+    description: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.
   - name: noir-artwork
     url: https://github.com/owasp-noir/noir-artwork
     description: Artwork for all official Noir swag
