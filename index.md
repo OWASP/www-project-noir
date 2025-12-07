@@ -5,13 +5,13 @@ title: OWASP Noir
 tags: noir owasp-noir sast dast attack-surface endpoint
 level: 2
 type: code
-pitch: An advanced hybrid analyzer that automatically detects all endpoints in your codebase, including shadow and undocumented APIs.
+pitch: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.
 
 ---
 
 <div align="center">
   <img src="assets/images/logo.png?noir" alt="" width="500px;">
-  <p>An advanced hybrid analyzer that automatically detects all endpoints in your codebase, <br>including shadow and undocumented APIs.</p>
+  <p>Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surface.</p>
 </div>
 
 <p align="center">
@@ -27,7 +27,9 @@ pitch: An advanced hybrid analyzer that automatically detects all endpoints in y
 
 <hr>
 
-OWASP Noir is an open-source attack surface discovery tool that automatically finds every endpoint in your codebase by combining precise static code analysis with AI. It reveals shadow APIs, undocumented routes, and hidden vulnerabilities that traditional tools and manual methods consistently miss — giving security teams and developers complete, accurate visibility into the real attack surface.
+Noir bridges the gap between SAST and DAST by analyzing source code to generate accurate, authenticated endpoint inventories. It detects what others miss: shadow APIs, deprecated endpoints, and hidden routes.
+
+By bypassing outdated documentation and proxies, Noir uses your source code to deliver a comprehensive, actionable attack surface inventory. This single source of truth empowers White-box security teams and Pentesters and integrates directly with DAST solutions, eliminating testing blind spots across your DevSecOps pipeline.
 
 For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
 
