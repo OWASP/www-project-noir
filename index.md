@@ -27,28 +27,37 @@ pitch: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surf
 
 <hr>
 
-Noir reads source code and extracts every endpoint your application exposes, including shadow APIs, deprecated routes, and hidden surfaces.
+Noir is a SAST tool that reads source code and extracts the endpoints an application exposes — paths, methods, parameters, headers, cookies, and the source files behind them. Shadow APIs, deprecated routes, and undocumented handlers come out as part of the same inventory; they aren't a separate mode.
 
-That inventory drives two downstream stacks. ZAP, Burp Suite, and Caido pick up endpoints they would never have crawled on their own. AI SAST (LLM-based code auditors and security agents) gets the entrypoints, files, parameters, and tags it needs to review attacker-reachable code, instead of skimming the whole repository.
+The inventory feeds three audiences:
+
+- **Human reviewers.** Security engineers and code auditors get a focused list of attacker-reachable entrypoints — paths, parameters, source files, tags — instead of skimming the whole repo.
+- **AI auditors.** LLM-based SAST agents get the same focused list, plus per-endpoint review context (`--include-callee` for 1-hop callees, `--ai-context` for guards, sinks, validators, and signals).
+- **DAST tools.** ZAP, Burp Suite, and Caido get a real route list to scan, including paths they would never have reached by crawling.
 
 For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
 
 ![](assets/images/preview.jpg)
 
-## Key Features
+## What Noir does
 
-- **Attack Surface Discovery**: Analyzes source code to identify your application's complete attack surface, including hidden endpoints, shadow APIs, and other security blind spots.
-- **AI-Powered Analysis**: Leverages Large Language Models (LLMs) to detect endpoints in any language or framework, even those not natively supported.
-- **Feeds DAST & AI SAST**: One endpoint inventory drives ZAP, Burp Suite, and Caido on the dynamic side, and points LLM-based SAST and code auditors at the entrypoints, files, and parameters worth reviewing on the static side.
-- **DevSecOps Ready**: Designed for seamless integration into security pipelines with support for tools like ZAP, Burp Suite, Caido, and more.
-- **Multi-Format Output**: Delivers results in JSON, YAML, TOML, OpenAPI Specification, SARIF, and other formats for easy integration with your existing workflow.
+- **Endpoint extraction.** Static analysis across 50+ frameworks. Returns endpoints, parameters, headers, cookies, and the source files they came from.
+- **LLM fallback.** Hand unsupported frameworks (or one-off custom routing) to OpenAI / Ollama / etc. when static rules don't apply.
+- **Output for the next stage.** JSON, YAML, OpenAPI, SARIF, cURL, Postman, HTML — whichever format the next tool in the pipeline reads.
+- **DAST integration.** Pipe directly into ZAP, Burp Suite, or Caido as a proxy target, or export OpenAPI for them to import.
+- **AI SAST context.** The endpoint inventory (and, with `--include-callee`, the 1-hop functions each handler invokes) is the focused context an LLM auditor needs to find attacker-reachable bugs. `--ai-context` goes further and attaches aggregated review context per endpoint — guards, callees, sinks, validators, and signals — so the LLM doesn't have to rediscover them.
+- **CI/CD.** GitHub Action, SARIF output, exit codes — fits the pipeline you already have.
 
 ## Road Map
-We plan to expand the range of supported programming languages and frameworks, and to continuously increase accuracy. Furthermore, we will leverage AI and Large Language Models (LLMs) to significantly broaden our analysis capabilities.
 
-Initially conceived as a tool to assist with WhiteBox testing, our immediate goal remains to extract and provide endpoints from the source code within the DevSecOps Pipeline. This enables Dynamic Application Security Testing (DAST) tools to conduct more accurate and stable scans.
+Noir started as a WhiteBox testing aid: extract endpoints from source so DAST can scan them more accurately. The job has grown — the same inventory now feeds human auditors and AI SAST agents too. The goal from here is to serve all three consumers equally well: humans reviewing the code, LLMs auditing it, and DAST tools scanning it.
 
-Looking ahead, our ambition is for Noir to become the canonical attack-surface layer for application security: the single inventory that DAST tools and AI SAST share, so every downstream consumer starts from the same view of what is actually exposed.
+From here:
+
+- Broaden language and framework coverage; keep accuracy honest with per-framework fixtures.
+- Lean harder on LLMs for the cases static analysis can't reach.
+- Enrich the per-endpoint review context (guards, callees, sinks, validators, signals) so human reviewers and AI auditors share the same focused view of each handler.
+- Keep DAST integration first-class — OpenAPI, proxy targets, and direct hand-offs to ZAP / Burp / Caido.
 
 <style>
   .sub-nav{
