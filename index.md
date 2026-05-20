@@ -29,9 +29,10 @@ pitch: Hunt every Endpoint in your code, expose Shadow APIs, map the Attack Surf
 
 Noir is a SAST tool that reads source code and extracts the endpoints an application exposes — paths, methods, parameters, headers, cookies, and the source files behind them. Shadow APIs, deprecated routes, and undocumented handlers come out as part of the same inventory; they aren't a separate mode.
 
-That inventory has two consumers:
+The inventory feeds three audiences:
 
-- **Code auditors — human or AI.** Reviewers and LLM-based SAST agents get a focused list of attacker-reachable entrypoints and the files, parameters, and tags around them, instead of skimming the whole repository.
+- **Human reviewers.** Security engineers and code auditors get a focused list of attacker-reachable entrypoints — paths, parameters, source files, tags — instead of skimming the whole repo.
+- **AI auditors.** LLM-based SAST agents get the same focused list, plus per-endpoint review context (`--include-callee` for 1-hop callees, `--ai-context` for guards, sinks, validators, and signals).
 - **DAST tools.** ZAP, Burp Suite, and Caido get a real route list to scan, including paths they would never have reached by crawling.
 
 For more information, please visit our [documentation page](https://owasp-noir.github.io/noir/).
@@ -44,18 +45,19 @@ For more information, please visit our [documentation page](https://owasp-noir.g
 - **LLM fallback.** Hand unsupported frameworks (or one-off custom routing) to OpenAI / Ollama / etc. when static rules don't apply.
 - **Output for the next stage.** JSON, YAML, OpenAPI, SARIF, cURL, Postman, HTML — whichever format the next tool in the pipeline reads.
 - **DAST integration.** Pipe directly into ZAP, Burp Suite, or Caido as a proxy target, or export OpenAPI for them to import.
-- **AI SAST context.** The endpoint inventory (and, with `--include-callee`, the 1-hop functions each handler invokes) is the focused context an LLM auditor needs to find attacker-reachable bugs.
+- **AI SAST context.** The endpoint inventory (and, with `--include-callee`, the 1-hop functions each handler invokes) is the focused context an LLM auditor needs to find attacker-reachable bugs. `--ai-context` goes further and attaches aggregated review context per endpoint — guards, callees, sinks, validators, and signals — so the LLM doesn't have to rediscover them.
 - **CI/CD.** GitHub Action, SARIF output, exit codes — fits the pipeline you already have.
 
 ## Road Map
 
-Noir started as a WhiteBox testing aid: extract endpoints from source so DAST can scan them more accurately. That's still the core job.
+Noir started as a WhiteBox testing aid: extract endpoints from source so DAST can scan them more accurately. The job has grown — the same inventory now feeds human auditors and AI SAST agents too. The goal from here is to serve all three consumers equally well: humans reviewing the code, LLMs auditing it, and DAST tools scanning it.
 
 From here:
 
 - Broaden language and framework coverage; keep accuracy honest with per-framework fixtures.
 - Lean harder on LLMs for the cases static analysis can't reach.
-- Make the endpoint inventory good enough that both DAST tools and AI SAST agents can use it as their shared view of what's actually exposed.
+- Enrich the per-endpoint review context (guards, callees, sinks, validators, signals) so human reviewers and AI auditors share the same focused view of each handler.
+- Keep DAST integration first-class — OpenAPI, proxy targets, and direct hand-offs to ZAP / Burp / Caido.
 
 <style>
   .sub-nav{
